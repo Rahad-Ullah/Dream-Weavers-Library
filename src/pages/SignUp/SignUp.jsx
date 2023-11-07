@@ -1,7 +1,9 @@
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import singUpImg from '../../assets/sign-up.webp'
 import useAuth from "../../hooks/useAuth";
+import Swal from 'sweetalert2'
 
 const SignUp = () => {
     const {createUser} = useAuth()
@@ -16,8 +18,20 @@ const SignUp = () => {
         createUser(email, password)
         .then((result) => {
             console.log(result.user)
+            Swal.fire({
+                title: 'Success!',
+                text: 'Sign up successful',
+                icon: 'success',
+                confirmButtonText: 'Ok'
+              })
         }).catch((err) => {
             console.log(err)
+            Swal.fire({
+                title: 'Error!',
+                text: 'Sign up failed',
+                icon: 'error',
+                confirmButtonText: 'Try again'
+              })
         });
     }
     
@@ -25,7 +39,7 @@ const SignUp = () => {
         <div className="hero min-h-screen py-8 max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="hero-content grid grid-cols-1 lg:grid-cols-11 gap-16 justify-between items-center">
           <div className="w-full flex justify-center items-center col-span-5">
-            {/* <img src={singUpImg} alt="" /> */}
+            <img src={singUpImg} alt="" />
           </div>
   
           <div className="card flex-shrink-0 col-span-6 w-full border md:p-10 lg:p-14">

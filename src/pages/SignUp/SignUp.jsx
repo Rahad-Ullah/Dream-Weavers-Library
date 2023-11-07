@@ -1,4 +1,4 @@
-import { FcGoogle } from "react-icons/fc";
+
 import { Link } from "react-router-dom";
 import singUpImg from '../../assets/sign-up.webp'
 import useAuth from "../../hooks/useAuth";
@@ -35,21 +35,21 @@ const SignUp = () => {
     }
     
     return (
-        <div className="hero min-h-screen py-12 max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+        <div className="hero min-h-screen font-poppins py-12 max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="hero-content grid grid-cols-1 lg:grid-cols-11 gap-16 p-0 justify-between items-center">
-          <div className="w-full flex justify-center items-center col-span-5">
+          <div className="w-full hidden md:flex justify-center items-center col-span-5">
             <img src={singUpImg} alt="" />
           </div>
   
-          <div className="card flex-shrink-0 col-span-6 w-full border md:p-10 lg:p-14">
-              <h2 className="text-4xl font-semibold text-light-dark text-center mb-2">Sign Up</h2>
+          <div className="card flex-shrink-0 col-span-6 w-full border py-10 lg:p-14">
+              <h2 className="text-4xl font-semibold text-accent text-center mb-2">Sign Up</h2>
               <form onSubmit={handleSignUp} className="card-body">
                   <div className="form-control">
                   <label className="label">
                       <span className="label-text font-semibold">Name</span>
                   </label>
                   <input
-                      type="name"
+                      type="text"
                       placeholder="Your name"
                       className="input input-bordered"
                       name="name"
@@ -69,8 +69,20 @@ const SignUp = () => {
                   />
                   </div>
                   <div className="form-control">
+                  <label className="label">
+                      <span className="label-text font-semibold">Photo URL</span>
+                  </label>
+                  <input
+                      type="text"
+                      placeholder="Your Photo URL"
+                      className="input input-bordered"
+                      name="photo"
+                      required
+                  />
+                  </div>
+                  <div className="form-control">
                     <label className="label">
-                        <span className="label-text font-semibold">Confirm Password</span>
+                        <span className="label-text font-semibold">Password</span>
                     </label>
                     <input
                         type="password"
@@ -84,11 +96,7 @@ const SignUp = () => {
                     <button className="btn btn-primary normal-case text-base">Sign Up</button>
                   </div>
             </form>
-            <p className="font-medium text-sm mb-7 text-center">Or Sign In with</p>
-            <div className="flex justify-center gap-4 px-8">
-                <button className="btn btn-primary btn-outline normal-case text-base w-full "><FcGoogle className="text-xl"></FcGoogle>Google</button>
-            </div>
-            <p className="text-[#737373] text-center text-sm mt-10">Already have an account? <Link to={'/login'} className="text-primary font-semibold hover:btn-link">Login</Link></p>
+            <p className="text-[#737373] text-center text-sm mt-4">Already have an account? <Link to={'/login'} className="text-primary font-semibold hover:btn-link">Login</Link></p>
           </div>
         </div>
     </div>

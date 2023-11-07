@@ -42,20 +42,33 @@ const Login = () => {
         googleSignIn()
         .then((result) => {
             console.log(result.user)
+            navigate(location?.state || '/')
+            Swal.fire({
+              title: 'Success!',
+              text: 'Login successful',
+              icon: 'success',
+              confirmButtonText: 'Ok'
+            })
         }).catch((err) => {
             console.log(err)
+            Swal.fire({
+              title: 'Error!',
+              text: 'Login failed',
+              icon: 'error',
+              confirmButtonText: 'Try again'
+            })
         });
     }
     
     return (
-        <div className="hero min-h-screen py-8 max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+        <div className="hero min-h-screen font-poppins py-8 max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="hero-content grid grid-cols-1 lg:grid-cols-11 gap-16 justify-between items-center">
-          <div className="w-full flex justify-center items-center col-span-5">
+          <div className="w-full hidden md:flex justify-center items-center col-span-5">
             <img src={loginImg} alt="" />
           </div>
   
-          <div className="card flex-shrink-0 col-span-6 w-full border md:p-10 lg:p-14">
-              <h2 className="text-4xl font-semibold text-light-dark text-center mb-2">Login</h2>
+          <div className="card flex-shrink-0 col-span-6 w-full border py-10 lg:p-14">
+              <h2 className="text-4xl font-semibold text-accent text-center mb-2">Login</h2>
               <form onSubmit={handleLogin} className="card-body">
                   <div className="form-control">
                   <label className="label">

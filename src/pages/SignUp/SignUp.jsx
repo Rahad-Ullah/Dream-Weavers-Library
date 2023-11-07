@@ -35,8 +35,8 @@ const SignUp = () => {
     }
     
     return (
-        <div className="hero min-h-screen py-8 max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
-        <div className="hero-content grid grid-cols-1 lg:grid-cols-11 gap-16 justify-between items-center">
+        <div className="hero min-h-screen py-12 max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+        <div className="hero-content grid grid-cols-1 lg:grid-cols-11 gap-16 p-0 justify-between items-center">
           <div className="w-full flex justify-center items-center col-span-5">
             <img src={singUpImg} alt="" />
           </div>

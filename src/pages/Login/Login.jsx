@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import loginImg from '../../assets/secure-login.webp'
 
 const Login = () => {
-    const { signIn } = useAuth()
+    const { signIn, googleSignIn } = useAuth()
     const location = useLocation()
     const navigate = useNavigate()
   
@@ -36,6 +36,15 @@ const Login = () => {
           confirmButtonText: 'Try again'
         })
       });
+    }
+
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+        .then((result) => {
+            console.log(result.user)
+        }).catch((err) => {
+            console.log(err)
+        });
     }
     
     return (
@@ -82,7 +91,7 @@ const Login = () => {
                   </div>
             </form>
             <p className="font-medium text-sm mb-7 text-center">Or Sign In with</p>
-            <div className="flex justify-center gap-4 px-8">
+            <div onClick={handleGoogleSignIn} className="flex justify-center gap-4 px-8">
                 <button className="btn btn-primary btn-outline normal-case text-base w-full "><FcGoogle className="text-xl"></FcGoogle>Google</button>
             </div>
             <p className="text-[#737373] text-center text-sm mt-10">Not have an account? <Link to={'/sign-up'} className="text-primary font-semibold hover:btn-link">Sign Up</Link></p>

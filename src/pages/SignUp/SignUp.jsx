@@ -1,4 +1,3 @@
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import singUpImg from '../../assets/sign-up.webp'
@@ -86,10 +85,8 @@ const SignUp = () => {
                   </div>
             </form>
             <p className="font-medium text-sm mb-7 text-center">Or Sign In with</p>
-            <div className="flex justify-center gap-4">
-                <button className="btn btn-circle group"><FaFacebookF className="text-[#3B5998] group-hover:text-primary"></FaFacebookF></button>
-                <button className="btn btn-circle group"><FaLinkedinIn className="text-[#0A66C2] group-hover:text-primary"></FaLinkedinIn></button>
-                <button className="btn btn-circle group"><FcGoogle className="text-[#3B5998] group-hover:text-primary"></FcGoogle></button>
+            <div className="flex justify-center gap-4 px-8">
+                <button className="btn btn-primary btn-outline normal-case text-base w-full "><FcGoogle className="text-xl"></FcGoogle>Google</button>
             </div>
             <p className="text-[#737373] text-center text-sm mt-10">Already have an account? <Link to={'/login'} className="text-primary font-semibold hover:btn-link">Login</Link></p>
           </div>

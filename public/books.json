@@ -1,0 +1,327 @@
+[
+    {
+      "name": "Sapiens: A Brief History of Humankind",
+      "author_name": "Yuval Noah Harari",
+      "image": "https://img.thriftbooks.com/api/images/m/4add0cae3f06cc6608129ba0cadec3d466bb364d.jpg",
+      "quantity": 5,
+      "category": "History",
+      "description": "Sapiens: A Brief History of Humankind by Yuval Noah Harari is an enthralling exploration of the history of our species. From the emergence of Homo sapiens to the complex societies of today, Harari examines key revolutions that shaped human history, including the Cognitive and Agricultural Revolutions, and their profound impacts on our collective narrative. With an engaging narrative style and interdisciplinary approach, Harari illuminates the interplay of biology, history, and culture that has defined the course of human civilization, challenging readers to reconsider their understanding of the human story.",
+      "rating": 5
+    },
+    {
+      "name": "The Silk Roads: A New History of the World",
+      "author_name": "Peter Frankopan",
+      "image": "https://img.thriftbooks.com/api/images/m/191891bbfee79c5a0873602a05dbf0dc70e60517.jpg",
+      "quantity": 8,
+      "category": "History",
+      "description": "The Silk Roads: A New History of the World, authored by Peter Frankopan, presents a captivating reinterpretation of world history, emphasizing the pivotal role of the ancient Silk Roads in shaping global civilizations. Frankopan traces the intricate networks of trade, culture, and ideas that spanned Asia, Europe, and Africa, fostering dynamic exchanges and connections that influenced the development of societies and cultures. By spotlighting the often overlooked significance of the East in historical narratives, Frankopan offers a fresh perspective that repositions the Silk Roads as a central force in the evolution of human history, challenging traditional Western-centric accounts.",
+      "rating": 4
+    },
+    {
+      "name": "Guns, Germs, and Steel: The Fates of Human Societies",
+      "author_name": "Jared Diamond",
+      "image": "https://img.thriftbooks.com/api/images/m/d7623f5d380a021433b75388708c0eb87f6b1df9.jpg",
+      "quantity": 7,
+      "category": "History",
+      "description": "Guns, Germs, and Steel: The Fates of Human Societies, penned by Jared Diamond, is a thought-provoking investigation into the factors that have shaped the trajectory of human civilizations. Diamond delves into the interconnected roles of geography, ecology, and technology, examining how certain societies developed advantages over others. Through a comprehensive analysis, Diamond challenges traditional narratives of human history, offering insights into the complex interactions between humans and their environments, and the consequent impacts on the rise and fall of societies across the globe.",
+      "rating": 4
+    },
+    {
+      "name": "The Rise and Fall of the Third Reich: A History of Nazi Germany",
+      "author_name": "William L. Shirer",
+      "image": "https://img.thriftbooks.com/api/images/m/d170eed4138d1f0c35a72988b8a3a4ee6b1dedc1.jpg",
+      "quantity": 6,
+      "category": "History",
+      "description": "The Rise and Fall of the Third Reich: A History of Nazi Germany, authored by William L. Shirer, is a definitive account of one of the darkest chapters in human history. Shirer, a firsthand witness to the events, meticulously chronicles the rise of the Nazi regime, its totalitarian rule, and its ultimate downfall during World War II. Through detailed analysis and historical documentation, Shirer offers a comprehensive portrayal of the political intrigue, ideological fervor, and human tragedy that characterized this tumultuous period, serving as a stark reminder of the dangers of totalitarianism and the resilience of the human spirit in the face of tyranny.",
+      "rating": 5
+    },
+    {
+      "name": "A People's History of the United States",
+      "author_name": "Howard Zinn",
+      "image": "https://img.thriftbooks.com/api/images/m/1007eac0e2a451de0d2508820c66c69f94472ab1.jpg",
+      "quantity": 10,
+      "category": "History",
+      "description": "A People's History of the United States by Howard Zinn presents an alternative narrative of the American story, one that centers the perspectives and experiences of marginalized communities. Zinn sheds light on the struggles and triumphs of Native Americans, African Americans, women, and laborers, offering a comprehensive and inclusive account of the American experience. Through meticulous research and compelling storytelling, Zinn challenges traditional historical accounts, encouraging readers to critically examine the complexities of power, privilege, and resistance in the context of American history.",
+      "rating": 4
+    },
+    {
+      "name": "A History of the World",
+      "author_name": "Andrew Marr",
+      "image": "https://img.thriftbooks.com/api/images/m/5729a40d24be8871b603494bfdbc70bd1de0778c.jpg",
+      "quantity": 4,
+      "category": "History",
+      "description": "A History of the World, authored by Andrew Marr, provides a sweeping panorama of human civilization, tracing the major cultural and political shifts that have shaped global history. Marr's insightful analysis navigates through the rise and fall of empires, the intricacies of socio-political revolutions, and the cultural exchanges that have defined the human experience. With a keen eye for detail and a compelling storytelling style, Marr highlights the interconnectedness of human societies, inviting readers to contemplate the enduring threads of continuity and change that define the rich tapestry of the world's collective past.",
+      "rating": 4
+    },
+    {
+        "name": "The Girl with the Dragon Tattoo",
+        "author_name": "Stieg Larsson",
+        "image": "https://img.thriftbooks.com/api/images/i/m/CC5464BDC2009E86268CE7D2661AC599E8CFDC93.jpg",
+        "quantity": 7,
+        "category": "Thriller",
+        "description": "The Girl with the Dragon Tattoo by Stieg Larsson is a riveting thriller that unravels the dark secrets of a wealthy Swedish family. Blending elements of mystery, crime, and psychological suspense, Larsson weaves a complex narrative that follows the unlikely alliance between investigative journalist Mikael Blomkvist and the enigmatic hacker Lisbeth Salander. As they delve into a decades-old disappearance, they confront a web of corruption, deceit, and violence, leading to a shocking climax that will keep readers on the edge of their seats.",
+        "rating": 4
+    },
+    {
+        "name": "Gone Girl",
+        "author_name": "Gillian Flynn",
+        "image": "https://img.thriftbooks.com/api/images/i/m/FE6121C8B047CB2879C5BB6EB595ACC71FE1D288.jpg",
+        "quantity": 5,
+        "category": "Thriller",
+        "description": "Gone Girl by Gillian Flynn is a twisted tale of love, betrayal, and deception that takes readers on a thrilling journey through the complexities of a modern marriage. When Amy Dunne goes missing on her fifth wedding anniversary, all eyes turn to her husband, Nick, as the prime suspect. As the narrative unfolds through alternating perspectives, Flynn masterfully crafts a narrative that blurs the lines between truth and lies, culminating in a jaw-dropping revelation that challenges everything the reader thought they knew.",
+        "rating": 5
+    },
+    {
+        "name": "The Da Vinci Code",
+        "author_name": "Dan Brown",
+        "image": "https://img.thriftbooks.com/api/images/i/m/4B7881E4480A28A28F885402F60E56CF7ECCC36B.jpg",
+        "quantity": 6,
+        "category": "Thriller",
+        "description": "The Da Vinci Code by Dan Brown is an electrifying thriller that follows symbologist Robert Langdon and cryptologist Sophie Neveu as they decipher a series of cryptic clues while unraveling a centuries-old mystery. From the corridors of the Louvre Museum to the enigmatic landscapes of Rosslyn Chapel, Langdon and Neveu embark on a perilous quest to uncover a secret that could shake the foundations of Christianity. With pulse-pounding suspense and intricate puzzles, Brown weaves together a narrative that blurs the boundaries between history, art, and religion, keeping readers enthralled until the final revelation.",
+        "rating": 4
+    },
+    {
+        "name": "The Silence of the Lambs",
+        "author_name": "Thomas Harris",
+        "image": "https://m.media-amazon.com/images/I/41WQ2q5txyL._SL350_.jpg",
+        "quantity": 8,
+        "category": "Thriller",
+        "description": "The Silence of the Lambs by Thomas Harris is a chilling psychological thriller that introduces the iconic character of Dr. Hannibal Lecter, a brilliant psychiatrist and cannibalistic serial killer. When FBI trainee Clarice Starling is assigned to interview Lecter in a desperate bid to apprehend another serial killer, she becomes entangled in a deadly game of wits and manipulation. Harris masterfully weaves a suspenseful narrative that delves into the darkest corners of the human psyche, delivering a spine-tingling experience that lingers long after the final page.",
+        "rating": 5
+    },
+    {
+        "name": "The Bourne Identity",
+        "author_name": "Robert Ludlum",
+        "image": "https://img.thriftbooks.com/api/images/m/8a8a25779f8f6576d4c3a4f7643ab84776b75f2a.jpg",
+        "quantity": 9,
+        "category": "Thriller",
+        "description": "The Bourne Identity by Robert Ludlum is a heart-pounding espionage thriller that introduces the enigmatic character of Jason Bourne, a man with amnesia who must piece together his identity while evading deadly adversaries. As Bourne navigates through a labyrinth of conspiracies and betrayals, he discovers his skills in combat and espionage, leading to a relentless pursuit to uncover the truth. Ludlum's electrifying narrative and relentless pacing make The Bourne Identity a gripping tale of survival, identity, and the pursuit of redemption.",
+        "rating": 4
+    },
+    {
+        "name": "The Shining",
+        "author_name": "Stephen King",
+        "image": "https://img.thriftbooks.com/api/images/i/m/221ECF34A82A001D81B779E0C1AEFE9F38B4645C.jpg",
+        "quantity": 10,
+        "category": "Thriller",
+        "description": "The Shining by Stephen King is a psychological horror thriller that delves into the descent of a family into madness within the eerie confines of the Overlook Hotel. As the winter snow traps the Torrance family in the isolated hotel, the malevolent forces within begin to unravel the sanity of the aspiring writer Jack Torrance. King's masterful storytelling and atmospheric tension create an unsettling narrative that explores the themes of isolation, madness, and the supernatural, culminating in a terrifying exploration of the darkness that lurks within the human psyche.",
+        "rating": 5
+    },
+    {
+        "name": "Dune",
+        "author_name": "Frank Herbert",
+        "image": "https://img.thriftbooks.com/api/images/i/m/5B1290BDD8BB5A4B4C4CD8C4A25741C7C5787C14.jpg",
+        "quantity": 7,
+        "category": "Sci-Fi",
+        "description": "Dune by Frank Herbert is a classic science fiction epic that unfolds on the desert planet of Arrakis, where noble houses vie for control of the coveted spice melange. As young Paul Atreides confronts his destiny as the prophesied messiah, he must navigate treacherous politics, ecological challenges, and the enigmatic power of the spice. Herbert's richly imagined universe, intricate political intrigue, and ecological themes have solidified Dune's place as a cornerstone of the science fiction genre.",
+        "rating": 4
+    },
+    {
+        "name": "Neuromancer",
+        "author_name": "William Gibson",
+        "image": "https://img.thriftbooks.com/api/images/i/m/7C7BF869F3B67CF1CDF301D39C42FBE946FDBB65.jpg",
+        "quantity": 5,
+        "category": "Sci-Fi",
+        "description": "Neuromancer by William Gibson is a groundbreaking cyberpunk novel that introduces readers to the gritty underworld of the matrix, a complex virtual reality network. As the disgraced hacker Case embarks on a dangerous mission to infiltrate the powerful artificial intelligence, Neuromancer, he becomes entangled in a web of corporate espionage and technological manipulation. Gibson's visionary narrative and evocative prose established the cyberpunk subgenre, exploring themes of artificial intelligence, cybernetic enhancement, and the precarious balance between humanity and technology.",
+        "rating": 5
+    },
+    {
+        "name": "Foundation",
+        "author_name": "Isaac Asimov",
+        "image": "https://m.media-amazon.com/images/I/51w53UYinrL._SL350_.jpg",
+        "quantity": 6,
+        "category": "Sci-Fi",
+        "description": "Foundation by Isaac Asimov is a pioneering work of science fiction that chronicles the collapse of a galactic empire and the efforts of psychohistorian Hari Seldon to preserve human knowledge and civilization. As Seldon orchestrates the Foundation's mission to shorten the ensuing dark age, he navigates political intrigue and unforeseen challenges that threaten the very fabric of human progress. Asimov's Foundation series remains a seminal exploration of sociopolitical dynamics, predictive science, and the perennial struggle for the preservation of knowledge and wisdom.",
+        "rating": 4
+    },
+    {
+        "name": "Snow Crash",
+        "author_name": "Neal Stephenson",
+        "image": "https://m.media-amazon.com/images/I/51nbYwWXNuL._SL350_.jpg",
+        "quantity": 8,
+        "category": "Sci-Fi",
+        "description": "Snow Crash by Neal Stephenson is a fast-paced cyberpunk novel that immerses readers in a near-future world where virtual reality and the physical realm intertwine. As the protagonist, Hiro Protagonist, delves into a conspiracy involving a mind-altering drug called Snow Crash, he uncovers a high-stakes plot that threatens to redefine the boundaries of reality and consciousness. Stephenson's dynamic narrative and inventive world-building propel readers through a thrilling exploration of linguistic viruses, corporate control, and the implications of a hyper-connected society.",
+        "rating": 5
+    },
+    {
+        "name": "The Left Hand of Darkness",
+        "author_name": "Ursula K. Le Guin",
+        "image": "https://m.media-amazon.com/images/I/313z5GNvGAL._SL350_.jpg",
+        "quantity": 9,
+        "category": "Sci-Fi",
+        "description": "The Left Hand of Darkness by Ursula K. Le Guin is a thought-provoking exploration of gender and politics within a complex interstellar civilization. Genly Ai, an envoy from the Ekumen, navigates the intricacies of the planet Gethen, where the inhabitants can change genders at will. Le Guin's nuanced narrative and insightful commentary on identity, loyalty, and cultural understanding offer a compelling examination of societal norms and the fluidity of human nature.",
+        "rating": 4
+    },
+    {
+        "name": "Hyperion",
+        "author_name": "Dan Simmons",
+        "image": "https://img.thriftbooks.com/api/images/i/m/78419A2610C9C1A244F39B1EAE07DDFE10A90279.jpg",
+        "quantity": 10,
+        "category": "Sci-Fi",
+        "description": "Hyperion by Dan Simmons is a space opera that interweaves the stories of seven pilgrims on a journey to confront the enigmatic Shrike, a god-like entity with mysterious powers. Set against the backdrop of a universe on the brink of war, Simmons masterfully crafts a narrative that combines elements of science fiction, philosophy, and classical literature, creating a rich tapestry of characters and worlds that grapple with themes of destiny, sacrifice, and the elusive nature of time and space.",
+        "rating": 5
+    },
+    {
+        "name": "The Innovators: How a Group of Hackers, Geniuses, and Geeks Created the Digital Revolution",
+        "author_name": "Walter Isaacson",
+        "image": "https://img.thriftbooks.com/api/images/m/f717be9b76fcc6c8dc0fd96356352ebaf2b1241a.jpg",
+        "quantity": 7,
+        "category": "Technology",
+        "description": "The Innovators by Walter Isaacson is a compelling exploration of the pioneers who shaped the digital age, from visionaries like Ada Lovelace and Alan Turing to modern tech moguls such as Steve Jobs and Bill Gates. Isaacson traces the evolution of computers and the internet, highlighting the collaborative efforts and individual brilliance that revolutionized the way we communicate, work, and live. Through vivid storytelling and insightful analysis, Isaacson provides an engrossing narrative that celebrates the human spirit of innovation and its transformative impact on society.",
+        "rating": 4
+    },
+    {
+        "name": "Steve Jobs",
+        "author_name": "Walter Isaacson",
+        "image": "https://img.thriftbooks.com/api/images/i/m/8929F04074F0A20258D0A8F04965AF8045436A9C.jpg",
+        "quantity": 5,
+        "category": "Technology",
+        "description": "Steve Jobs by Walter Isaacson is an intimate biography of the enigmatic co-founder of Apple, providing a comprehensive look into Jobs' complex personality, visionary leadership, and enduring legacy. Isaacson's meticulously researched account delves into Jobs' relentless pursuit of perfection, his tumultuous professional journey, and his pivotal contributions to the technology industry. By capturing the essence of Jobs' entrepreneurial spirit and creative genius, Isaacson offers readers a profound understanding of the man behind some of the most iconic products of the digital age.",
+        "rating": 5
+    },
+    {
+        "name": "The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography",
+        "author_name": "Simon Singh",
+        "image": "https://img.thriftbooks.com/api/images/m/d86021bf7613987ee93c64e7e79195bb0f11baf7.jpg",
+        "quantity": 6,
+        "category": "Technology",
+        "description": "The Code Book by Simon Singh is a captivating exploration of the history and evolution of cryptography, from ancient times to the modern digital era. Singh unravels the complexities of code-making and code-breaking, revealing the ingenious methods used by individuals and governments to safeguard sensitive information. Through engaging storytelling and accessible explanations of cryptographic principles, Singh sheds light on the pivotal role of encryption in shaping the course of history and modern communication.",
+        "rating": 4
+    },
+    {
+        "name": "Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future",
+        "author_name": "Ashlee Vance",
+        "image": "https://img.thriftbooks.com/api/images/i/m/CEC7C5DC9D83647ED6AA9521B4FED0717F5E67A1.jpg",
+        "quantity": 8,
+        "category": "Technology",
+        "description": "Elon Musk by Ashlee Vance offers a comprehensive look into the life and ambitions of the visionary entrepreneur behind Tesla, SpaceX, and other groundbreaking ventures. Vance delves into Musk's relentless pursuit of innovation, his audacious goals for space exploration and sustainable energy, and his unwavering commitment to pushing the boundaries of technological possibility. Through exclusive interviews and exhaustive research, Vance crafts a nuanced portrait of a modern-day titan, providing valuable insights into the challenges and triumphs of a tech luminary driven by a passion for shaping the future.",
+        "rating": 5
+    },
+    {
+        "name": "The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win",
+        "author_name": "Gene Kim, Kevin Behr, George Spafford",
+        "image": "https://img.thriftbooks.com/api/images/m/d4a17aff73deaf98859a85c2f7c2266ed4d6a004.jpg",
+        "quantity": 9,
+        "category": "Technology",
+        "description": "The Phoenix Project by Gene Kim, Kevin Behr, and George Spafford is a captivating novel that illuminates the challenges of modern IT management and the principles of DevOps. Through the story of an IT manager's journey to revitalize a struggling project, the authors provide valuable insights into effective leadership, agile methodologies, and the collaborative approaches that drive organizational success. With a compelling narrative and practical lessons for improving business processes, The Phoenix Project offers a refreshing perspective on the intersection of technology and business strategy.",
+        "rating": 4
+    },
+    {
+        "name": "Hackers: Heroes of the Computer Revolution",
+        "author_name": "Steven Levy",
+        "image": "https://img.thriftbooks.com/api/images/i/m/9B7A32E5B86CD4E187E11055E81DFD56B715FFA1.jpg",
+        "quantity": 10,
+        "category": "Technology",
+        "description": "Hackers by Steven Levy is an engaging exploration of the early pioneers of computing and the subversive culture that laid the groundwork for the digital revolution. From the early days of MIT's Tech Model Railroad Club to the emergence of homebrew computer clubs, Levy delves into the passionate individuals and communities that shaped the ethos of hacking and tinkering. With a blend of journalistic storytelling and historical analysis, Hackers celebrates the creativity and ingenuity of those who defied societal norms and redefined the possibilities of technology.",
+        "rating": 5
+    },
+    {
+        "name": "Good to Great: Why Some Companies Make the Leap and Others Don't",
+        "author_name": "Jim Collins",
+        "image": "https://img.thriftbooks.com/api/images/i/m/DBAA2FA9301E225CD6AEEF855C7F17B563BB925A.jpg",
+        "quantity": 7,
+        "category": "Business",
+        "description": "Good to Great by Jim Collins is a seminal business book that examines the distinguishing factors that differentiate exceptional companies from their average counterparts. Through a comprehensive study of various corporations, Collins identifies key principles and practices that enable companies to achieve sustained success and surpass their competitors. With compelling insights and actionable strategies, Good to Great provides valuable lessons for leaders and organizations striving to attain long-term excellence and significance in the ever-evolving business landscape.",
+        "rating": 4
+    },
+    {
+        "name": "The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses",
+        "author_name": "Eric Ries",
+        "image": "https://img.thriftbooks.com/api/images/i/m/8039C2E810AD20F874725D22A718365FB137B5D7.jpg",
+        "quantity": 5,
+        "category": "Business",
+        "description": "The Lean Startup by Eric Ries offers a groundbreaking approach to entrepreneurship, emphasizing the importance of rapid experimentation, validated learning, and iterative product development. Ries advocates for a 'build-measure-learn' feedback loop that enables startups to adapt to market changes and refine their offerings based on customer feedback. With practical insights and real-world examples, The Lean Startup presents a systematic framework for fostering innovation and achieving sustainable growth in today's dynamic business environment.",
+        "rating": 5
+    },
+    {
+        "name": "The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change",
+        "author_name": "Stephen R. Covey",
+        "image": "https://img.thriftbooks.com/api/images/i/m/325DB72A06D5F265B59A11F34CC9510C7354F97D.jpg",
+        "quantity": 6,
+        "category": "Business",
+        "description": "The 7 Habits of Highly Effective People by Stephen R. Covey is a transformative guide that outlines seven fundamental principles for personal and professional growth. Covey's holistic approach emphasizes the development of essential habits such as proactivity, prioritization, and empathetic communication, enabling individuals to cultivate effectiveness and influence in their personal and professional lives. With practical advice and thought-provoking insights, The 7 Habits of Highly Effective People remains a timeless resource for anyone seeking to enhance their productivity and achieve meaningful success.",
+        "rating": 4
+    },
+    {
+        "name": "Zero to One: Notes on Startups, or How to Build the Future",
+        "author_name": "Peter Thiel, Blake Masters",
+        "image": "https://img.thriftbooks.com/api/images/i/m/DBAE0FE41CC2C9A26D39D4E8A6C9D81B73ECB6CF.jpg",
+        "quantity": 8,
+        "category": "Business",
+        "description": "Zero to One by Peter Thiel and Blake Masters offers a contrarian perspective on innovation and entrepreneurship, emphasizing the importance of creating unique and transformative solutions that redefine industries. Thiel's insights challenge conventional notions of competition and encourage entrepreneurs to focus on building revolutionary ventures that generate new value and capture untapped market potential. With a blend of philosophical reflection and practical business advice, Zero to One inspires aspiring entrepreneurs to pursue bold, unconventional ideas and embark on the journey of building the future.",
+        "rating": 5
+    },
+    {
+        "name": "Thinking, Fast and Slow",
+        "author_name": "Daniel Kahneman",
+        "image": "https://img.thriftbooks.com/api/images/i/m/F79E30E8995013693900AB918E188137E28BFA34.jpg",
+        "quantity": 9,
+        "category": "Business",
+        "description": "Thinking, Fast and Slow by Daniel Kahneman is a groundbreaking exploration of the cognitive biases and psychological mechanisms that influence human decision-making. Kahneman elucidates the dichotomy between intuitive, fast thinking and deliberate, slow thinking, offering insights into the complexities of judgment, reasoning, and behavioral economics. With a wealth of research and real-world examples, Thinking, Fast and Slow provides a comprehensive framework for understanding the intricacies of human thought processes and their implications for individual and organizational decision-making.",
+        "rating": 4
+    },
+    {
+        "name": "Start with Why: How Great Leaders Inspire Everyone to Take Action",
+        "author_name": "Simon Sinek",
+        "image": "https://img.thriftbooks.com/api/images/i/m/C90FAED778B143B46120C6CE7EE57679DDBD5D00.jpg",
+        "quantity": 10,
+        "category": "Business",
+        "description": "Start with Why by Simon Sinek delves into the significance of purpose-driven leadership and its impact on inspiring action and fostering organizational success. Sinek advocates for a 'Golden Circle' framework that prioritizes the 'why' behind an organization's mission, vision, and values, enabling leaders to cultivate a sense of purpose and direction that resonates with employees and customers alike. Through compelling anecdotes and case studies, Start with Why offers valuable insights for leaders seeking to build a thriving company culture and create a lasting impact in their respective industries.",
+        "rating": 5
+    },
+    {
+        "name": "Into the Wild",
+        "author_name": "Jon Krakauer",
+        "image": "https://img.thriftbooks.com/api/images/i/m/03FF65D210D7840341517AC5941B50DC635F0026.jpg",
+        "quantity": 7,
+        "category": "Travel",
+        "description": "Into the Wild by Jon Krakauer is a captivating nonfiction narrative that recounts the journey of Christopher McCandless, a young adventurer who abandons his conventional life to explore the wilderness of Alaska. Krakauer delves into McCandless's motivations, experiences, and ultimate fate, offering insights into the allure and dangers of a solitary quest for freedom and self-discovery. With a poignant exploration of nature's unforgiving beauty and human resilience, Into the Wild serves as a poignant reminder of the transformative power of travel and the complexities of the human spirit.",
+        "rating": 4
+    },
+    {
+        "name": "In a Sunburned Country",
+        "author_name": "Bill Bryson",
+        "image": "https://img.thriftbooks.com/api/images/i/m/768A2434C9E7CAE875AD9FA4689178CEAD790C93.jpg",
+        "quantity": 5,
+        "category": "Travel",
+        "description": "In a Sunburned Country by Bill Bryson is a delightful travelogue that chronicles Bryson's explorations across the vast and diverse landscape of Australia. With his trademark humor and insightful observations, Bryson paints a vivid portrait of the country's unique wildlife, natural wonders, and cultural eccentricities, offering readers an entertaining and informative journey through the land Down Under. From bustling cities to remote outback regions, Bryson's narrative captures the essence of Australia's charm and complexity, inviting readers to embark on an unforgettable armchair adventure.",
+        "rating": 5
+    },
+    {
+        "name": "Eat, Pray, Love",
+        "author_name": "Elizabeth Gilbert",
+        "image": "https://img.thriftbooks.com/api/images/i/m/6122C818C8A81DFB5FE2F3CAE6C47DE13BA450CC.jpg",
+        "quantity": 6,
+        "category": "Travel",
+        "description": "Eat, Pray, Love by Elizabeth Gilbert is a memoir that documents Gilbert's transformative journey across Italy, India, and Indonesia as she seeks solace, spiritual enlightenment, and self-discovery. Through her immersive experiences with food, meditation, and love, Gilbert navigates the complexities of personal growth and the pursuit of balance and fulfillment. With candid introspection and evocative storytelling, Eat, Pray, Love resonates with readers, encouraging them to embrace vulnerability and embark on their own quests for authenticity and inner peace.",
+        "rating": 4
+    },
+    {
+        "name": "A Walk in the Woods: Rediscovering America on the Appalachian Trail",
+        "author_name": "Bill Bryson",
+        "image": "https://m.media-amazon.com/images/I/61ksRYf1yHL._SL350_.jpg",
+        "quantity": 8,
+        "category": "Travel",
+        "description": "A Walk in the Woods by Bill Bryson recounts the author's humorous and insightful trek along the Appalachian Trail, one of America's most iconic long-distance hiking routes. With an engaging blend of travelogue and personal reflection, Bryson captures the natural beauty, challenges, and idiosyncrasies of the trail and the individuals he encounters along the way. Through Bryson's witty anecdotes and genuine appreciation for nature, A Walk in the Woods invites readers to join him on an unforgettable journey through the splendor of the American wilderness.",
+        "rating": 5
+    },
+    {
+        "name": "The Geography of Bliss: One Grump's Search for the Happiest Places in the World",
+        "author_name": "Eric Weiner",
+        "image": "https://img.thriftbooks.com/api/images/i/m/D3C948CE057E3921D1144AE5264F5FC7CDC088CB.jpg",
+        "quantity": 9,
+        "category": "Travel",
+        "description": "The Geography of Bliss by Eric Weiner is a captivating exploration of happiness and cultural differences as the author embarks on a global quest to uncover the factors that contribute to human well-being. Weiner's engaging narrative takes readers to a diverse array of countries, from Iceland to Bhutan, where he investigates the cultural, geographical, and social elements that shape individual and collective happiness. Through introspective analysis and witty observations, The Geography of Bliss offers a compelling journey that prompts readers to contemplate the multifaceted nature of joy and contentment.",
+        "rating": 4
+    },
+    {
+        "name": "Wild: From Lost to Found on the Pacific Crest Trail",
+        "author_name": "Cheryl Strayed",
+        "image": "https://img.thriftbooks.com/api/images/i/m/D71F94B863E84D786DA274A585DB7B5FDD571294.jpg",
+        "quantity": 10,
+        "category": "Travel",
+        "description": "Wild by Cheryl Strayed is a poignant memoir that chronicles the author's transformative solo trek along the Pacific Crest Trail, spanning from the Mojave Desert to Washington State. Strayed's introspective narrative delves into her physical and emotional challenges, as well as her profound encounters with nature and fellow hikers. With raw honesty and evocative prose, Wild captures the resilience of the human spirit and the healing power of wilderness, inspiring readers to embark on their own journeys of self-discovery and personal growth.",
+        "rating": 5
+    }
+]
+  

@@ -10,6 +10,8 @@ import PdfBookViewer from "../pages/PdfBook/PdfBookViewer";
 import BorrowedBooks from "../pages/BorrowedBooks/BorrowedBooks";
 import AllBooks from "../pages/AllBooks/AllBooks";
 import Update from "../pages/Update/Update";
+import PrivateRoutes from "./PrivateRoutes";
+import AddBook from "../pages/AddBook/AddBook";
 
 const router = createBrowserRouter([
     {
@@ -28,7 +30,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'book/:id',
-                element: <BookDetails></BookDetails>,
+                element: <PrivateRoutes><BookDetails></BookDetails></PrivateRoutes>,
                 loader: ({params}) => fetch(`http://localhost:5000/book/${params.id}`)
             },
             {
@@ -37,16 +39,20 @@ const router = createBrowserRouter([
             },
             {
                 path: '/borrowed-books',
-                element: <BorrowedBooks></BorrowedBooks>,
+                element: <PrivateRoutes><BorrowedBooks></BorrowedBooks></PrivateRoutes>,
             },
             {
                 path: '/all-books',
-                element: <AllBooks></AllBooks>,
+                element: <PrivateRoutes><AllBooks></AllBooks></PrivateRoutes>,
                 loader: () => fetch(`http://localhost:5000/avail-books`)
             },
             {
+                path: '/add-book',
+                element: <PrivateRoutes><AddBook></AddBook></PrivateRoutes>,
+            },
+            {
                 path: 'update/:id',
-                element: <Update></Update>,
+                element: <PrivateRoutes><Update></Update></PrivateRoutes>,
                 loader: ({params}) => fetch(`http://localhost:5000/book/${params.id}`)
             },
             {

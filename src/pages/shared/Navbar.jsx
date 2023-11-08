@@ -2,14 +2,23 @@ import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/logo.png'
 import useAuth from '../../hooks/useAuth';
 import user_image from '../../assets/user.png'
+import { useState } from 'react';
+import axios from 'axios';
 
 const Navbar = () => {
     const {user, logOut} = useAuth()
+    const [loggedUser, setLoggedUser] = useState({})
+
+    if(user){
+        axios.get(`http://localhost:5000/users?email=${user?.email}`)
+        .then(res => setLoggedUser(res.data))
+    }
 
     const handleLogOut = () => {
         logOut()
         .then(() => {
             console.log('Logout success')
+            setLoggedUser(null)
         }).catch((err) => {
             console.log(err)
         });
@@ -45,13 +54,19 @@ const Navbar = () => {
                 </div>
                 <div>
                     {
+                        // show user name if user exist
                         user &&
-                        <h3 className='font-medium text-accent text-xl mr-3 hidden lg:block'>Hi, {user?.displayName}</h3>
+                        <h3 className='font-medium text-accent text-xl mr-3 hidden lg:block'>Hi, {user?.displayName || loggedUser?.name}</h3>
                     }
                     <div className="dropdown dropdown-end">
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full flex justify-center items-center">
-                            <img src={user ? user?.photoURL : user_image} />
+                            {
+                                // show user photo if user exist
+                                user ?
+                                <img src={user?.photoURL || loggedUser?.photoURL} alt="" />
+                                : <img src={user_image} alt="" />
+                            }
                         </div>
                     </label>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">

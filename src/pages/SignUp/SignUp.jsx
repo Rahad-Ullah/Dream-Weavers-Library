@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import singUpImg from '../../assets/sign-up.webp'
 import useAuth from "../../hooks/useAuth";
 import Swal from 'sweetalert2'
+import axios from "axios";
 
 const SignUp = () => {
     const {createUser} = useAuth()
@@ -10,9 +11,15 @@ const SignUp = () => {
     const handleSignUp = (event) => {
         event.preventDefault()
         const form = event.target;
-        // const name = form.name.value;
+        const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
+        const photoURL = form.photo.value;
+        const newUser = {
+            name,
+            email,
+            photoURL
+        }
         
         createUser(email, password)
         .then((result) => {
@@ -22,7 +29,13 @@ const SignUp = () => {
                 text: 'Sign up successful',
                 icon: 'success',
                 confirmButtonText: 'Ok'
-              })
+            })
+            axios.post(`http://localhost:5000/users`, newUser)
+            .then(res => {
+                if(res.data.insertedId){
+                    console.log('setting user on database has been successful')
+                }
+            })
         }).catch((err) => {
             console.log(err)
             Swal.fire({

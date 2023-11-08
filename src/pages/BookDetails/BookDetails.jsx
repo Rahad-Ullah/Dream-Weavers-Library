@@ -11,6 +11,12 @@ const BookDetails = () => {
     const {_id, name, author_name, image, category, rating, quantity} = book;
     const {user} = useAuth()
     const [availQuantity, setAvailQuantity] = useState(quantity)
+    const [loggedUser, setLoggedUser] = useState({})
+
+    if(user){
+        axios.get(`http://localhost:5000/users?email=${user?.email}`)
+        .then(res => setLoggedUser(res.data))
+    }
 
     const handleBorrow = (e) => {
         e.preventDefault()
@@ -95,7 +101,7 @@ const BookDetails = () => {
                             placeholder="Your name"
                             className="input input-bordered"
                             name="name"
-                            defaultValue={user?.name}
+                            defaultValue={loggedUser?.name}
                             required
                         />
                         </div>

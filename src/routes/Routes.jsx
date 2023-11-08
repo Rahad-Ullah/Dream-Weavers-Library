@@ -7,6 +7,7 @@ import Error from "../pages/Error/Error";
 import CategoryDetails from "../pages/CategoryDetails/CategoryDetails";
 import BookDetails from "../pages/BookDetails/BookDetails";
 import PdfBookViewer from "../pages/PdfBook/PdfBookViewer";
+import BorrowedBooks from "../pages/BorrowedBooks/BorrowedBooks";
 
 const router = createBrowserRouter([
     {

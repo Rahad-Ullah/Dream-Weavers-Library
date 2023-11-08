@@ -26,6 +26,7 @@ const Login = () => {
           icon: 'success',
           confirmButtonText: 'Ok'
         })
+
       })
       .catch((err) => {
         console.log(err)

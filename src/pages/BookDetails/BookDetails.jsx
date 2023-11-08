@@ -32,6 +32,7 @@ const BookDetails = () => {
             name,
             image,
             category,
+            quantity,
             borrowedDate,
             returnDate
         }
@@ -44,14 +45,16 @@ const BookDetails = () => {
         axios.post(`http://localhost:5000/borrowed-books`, borrowOrder)
         .then((result) => {
             console.log(result.data)
-            toast.success('Added to borrowed list.')
+            if(result.data.insertedId){
+                toast.success('Added to borrowed list.')
+            }
         }).catch((err) => {
             console.log(err)
-            toast.error('Faild to add borrowed list.')
+            toast.error('Already has added to borrowed list.')
         });
 
         // update available book quantity
-        axios.patch(`http://localhost:5000/books?id=${_id}`, {quantity: quantity - 1})
+        axios.patch(`http://localhost:5000/books?id=${_id}&name=${name}`, {quantity: availQuantity - 1})
         .then((result) => {
             console.log(result.data)
             if(result.data.modifiedCount){

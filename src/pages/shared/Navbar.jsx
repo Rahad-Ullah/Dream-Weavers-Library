@@ -2,17 +2,20 @@ import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/logo.png'
 import useAuth from '../../hooks/useAuth';
 import user_image from '../../assets/user.png'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const Navbar = () => {
     const {user, logOut} = useAuth()
     const [loggedUser, setLoggedUser] = useState({})
+    console.log(loggedUser)
 
-    if(user){
-        axios.get(`http://localhost:5000/users?email=${user?.email}`)
-        .then(res => setLoggedUser(res.data))
-    }
+    useEffect( () => {
+        if(user){
+            axios.get(`http://localhost:5000/users?email=${user?.email}`)
+            .then(res => setLoggedUser(res.data))
+        }
+    },[user])
 
     const handleLogOut = () => {
         logOut()
@@ -43,8 +46,8 @@ const Navbar = () => {
                     {/* Navbar menu content here */}
                         <li><NavLink to={'/'} className={({isActive}) => isActive ? 'btn btn-sm btn-primary normal-case text-base' : 'btn btn-sm btn-ghost normal-case text-base'}>Home</NavLink></li>
                         <li><NavLink to={'/add-book'} className={({isActive}) => isActive ? 'btn btn-sm btn-primary normal-case text-base' : 'btn btn-sm btn-ghost normal-case text-base'}>Add Book</NavLink></li>
-                        <li><NavLink to={'all-books'} className={({isActive}) => isActive ? 'btn btn-sm btn-primary normal-case text-base' : 'btn btn-sm btn-ghost normal-case text-base'}>All Books</NavLink></li>
-                        <li><NavLink to={'borrowed-books'} className={({isActive}) => isActive ? 'btn btn-sm btn-primary normal-case text-base' : 'btn btn-sm btn-ghost normal-case text-base'}>Borrowed Books</NavLink></li>
+                        <li><NavLink to={'/all-books'} className={({isActive}) => isActive ? 'btn btn-sm btn-primary normal-case text-base' : 'btn btn-sm btn-ghost normal-case text-base'}>All Books</NavLink></li>
+                        <li><NavLink to={'/borrowed-books'} className={({isActive}) => isActive ? 'btn btn-sm btn-primary normal-case text-base' : 'btn btn-sm btn-ghost normal-case text-base'}>Borrowed Books</NavLink></li>
                         {
                             user ?
                             <li><NavLink to={'/login'} onClick={handleLogOut} className={({isActive}) => isActive ? 'btn btn-sm btn-primary normal-case text-base' : 'btn btn-sm btn-ghost normal-case text-base'}>Logout</NavLink></li>

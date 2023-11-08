@@ -8,6 +8,8 @@ import CategoryDetails from "../pages/CategoryDetails/CategoryDetails";
 import BookDetails from "../pages/BookDetails/BookDetails";
 import PdfBookViewer from "../pages/PdfBook/PdfBookViewer";
 import BorrowedBooks from "../pages/BorrowedBooks/BorrowedBooks";
+import AllBooks from "../pages/AllBooks/AllBooks";
+import Update from "../pages/Update/Update";
 
 const router = createBrowserRouter([
     {
@@ -32,6 +34,20 @@ const router = createBrowserRouter([
             {
                 path: '/pdf-view/:id',
                 element: <PdfBookViewer></PdfBookViewer>,
+            },
+            {
+                path: '/borrowed-books',
+                element: <BorrowedBooks></BorrowedBooks>,
+            },
+            {
+                path: '/all-books',
+                element: <AllBooks></AllBooks>,
+                loader: () => fetch(`http://localhost:5000/avail-books`)
+            },
+            {
+                path: 'update/:id',
+                element: <Update></Update>,
+                loader: ({params}) => fetch(`http://localhost:5000/book/${params.id}`)
             },
             {
                 path: '/sign-up',

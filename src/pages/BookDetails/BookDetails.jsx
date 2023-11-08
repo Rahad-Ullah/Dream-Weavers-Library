@@ -3,12 +3,14 @@ import { Rating } from 'primereact/rating';
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
 import toast, { Toaster } from 'react-hot-toast';
+import { useState } from "react";
         
 
 const BookDetails = () => {
     const book = useLoaderData()
     const {_id, name, author_name, image, category, rating, quantity} = book;
     const {user} = useAuth()
+    const [availQuantity, setAvailQuantity] = useState(quantity)
 
     const handleBorrow = (e) => {
         e.preventDefault()
@@ -28,6 +30,11 @@ const BookDetails = () => {
             returnDate
         }
         
+        if(availQuantity < 1){
+            toast.error('No book available now.')
+            return;
+        }
+        // insert to borrowed collection
         axios.post(`http://localhost:5000/borrowed-books`, borrowOrder)
         .then((result) => {
             console.log(result.data)
@@ -35,6 +42,17 @@ const BookDetails = () => {
         }).catch((err) => {
             console.log(err)
             toast.error('Faild to add borrowed list.')
+        });
+
+        // update available book quantity
+        axios.patch(`http://localhost:5000/books?id=${_id}`, {quantity: quantity - 1})
+        .then((result) => {
+            console.log(result.data)
+            if(result.data.modifiedCount){
+                setAvailQuantity(availQuantity - 1)
+            }
+        }).catch((err) => {
+            console.log(err)
         });
     }
     
@@ -50,7 +68,7 @@ const BookDetails = () => {
                 <p className="font-medium">Category: {category}</p>
                 <Rating value={rating} readOnly cancel={false} className="text-amber-500 text-2xl flex gap-1"/>
                 <div className="py-8">
-                    <span className={`font-medium text-lg p-4 px-5 border-2 ${quantity > 0 ? 'border-success' : 'border-error'}`}>{quantity} Copy Available</span>
+                    <span className={`font-medium text-lg p-4 px-5 border-2 ${availQuantity > 0 ? 'border-success' : 'border-error'}`}>{availQuantity} Copy Available</span>
                 </div>
                 <div className="flex gap-6 pt-4">
                     <Link to={`/pdf-view/${_id}`} className="btn btn-primary normal-case text-base btn-outline">Read Now</Link>

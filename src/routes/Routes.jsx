@@ -5,6 +5,7 @@ import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Error from "../pages/Error/Error";
 import CategoryDetails from "../pages/CategoryDetails/CategoryDetails";
+import BookDetails from "../pages/BookDetails/BookDetails";
 
 const router = createBrowserRouter([
     {
@@ -21,11 +22,11 @@ const router = createBrowserRouter([
                 element: <CategoryDetails></CategoryDetails>,
                 loader: ({params}) => fetch(`http://localhost:5000/books/${params.category}`)
             },
-            // {
-            //     path: 'book/:id',
-            //     element: <BookDetails></BookDetails>,
-            //     loader: ({params}) => fetch(`http://localhost:5000/book/${params.id}`)
-            // },
+            {
+                path: 'book/:id',
+                element: <BookDetails></BookDetails>,
+                loader: ({params}) => fetch(`http://localhost:5000/book/${params.id}`)
+            },
             {
                 path: '/sign-up',
                 element: <SignUp></SignUp>,

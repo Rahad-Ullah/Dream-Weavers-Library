@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Rating } from 'primereact/rating';
 
 const DetailsCard = ({book}) => {
     const {_id, name, author_name, category, image, rating} = book;
@@ -13,7 +14,7 @@ const DetailsCard = ({book}) => {
                     <h1 className="text-lg font-semibold text-accent">{name}</h1>
                     <h2 className="font-medium">Author: {author_name}</h2>
                     <p className="">Category: {category}</p>
-                    <p className="">Rating: {rating}</p>
+                    <Rating value={rating} readOnly cancel={false} className="text-amber-500 text-2xl flex gap-1"/>
                 </div>
                 <div>
                     <Link to={`/book/${_id}`} className="btn btn-primary w-full mt-4 normal-case text-base">More Details</Link>

@@ -6,6 +6,7 @@ import Login from "../pages/Login/Login";
 import Error from "../pages/Error/Error";
 import CategoryDetails from "../pages/CategoryDetails/CategoryDetails";
 import BookDetails from "../pages/BookDetails/BookDetails";
+import PdfBookViewer from "../pages/PdfBook/PdfBookViewer";
 
 const router = createBrowserRouter([
     {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
                 path: 'book/:id',
                 element: <BookDetails></BookDetails>,
                 loader: ({params}) => fetch(`http://localhost:5000/book/${params.id}`)
+            },
+            {
+                path: '/pdf-view/:id',
+                element: <PdfBookViewer></PdfBookViewer>,
             },
             {
                 path: '/sign-up',

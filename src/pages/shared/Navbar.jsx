@@ -1,7 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.png';
 import useAuth from '../../hooks/useAuth';
-import user_image from '../../assets/user.png'
+import user_image from '../../assets/user.png';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -15,7 +15,7 @@ const Navbar = () => {
             axios.get(`http://localhost:5000/users?email=${user?.email}`)
             .then(res => setLoggedUser(res.data))
         }
-    },[user])
+    },[])
 
     const handleLogOut = () => {
         logOut()

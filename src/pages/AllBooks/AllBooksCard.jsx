@@ -4,6 +4,7 @@ import { Rating } from 'primereact/rating';
 const AllBooksCard = ({book}) => {
     const {_id, name, author_name, image, category, rating} = book;
 
+
     return (
         <div className="flex flex-col p-6 border rounded hover:shadow-2xl transition">
             <figure className="mb-5 flex justify-center items-center p-8 bg-amber-50 rounded">

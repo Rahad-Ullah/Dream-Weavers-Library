@@ -13,7 +13,7 @@ const Update = () => {
         const author_name = form.author.value;
         const category = form.category.value;
         const image = form.image.value;
-        const rating = form.rating.value;
+        const rating = parseInt(form.rating.value);
         const updatedBook = {name, author_name, category, image, rating}
 
         // send data to the server
@@ -23,16 +23,20 @@ const Update = () => {
             if(result.data.modifiedCount){
                 toast.success('Update Successful')
             }
+            else{
+                toast.success('No Change')
+            }
         }).catch((err) => {
             console.log(err)
+            toast.success('Update Failed')
         });
     }
     
     return (
     <div>
         <div className='max-w-4xl mx-auto py-16'>
-            <div className="px-8 md:px-28 py-16 bg-sky-50">
-            <h2 className="text-3xl text-center font-semibold mb-6 font-poppins text-[#374151]">Update Book</h2>
+            <div className="px-8 md:px-28 py-16 bg-amber-50">
+            <h2 className="text-3xl text-center font-semibold mb-6 font-poppins text-secondary">Update Book</h2>
             <div>
             <form onSubmit={handleUpdate} className="grid grid-cols-1 gap-6">
                 {/* Name */}
@@ -48,7 +52,7 @@ const Update = () => {
                     className="input input-bordered"
                 />
                 </div>
-                {/* Brand Name */}
+                {/* Author Name */}
                 <div className="form-control">
                 <label className="label">
                     <span className="label-text">Author</span>
@@ -61,18 +65,24 @@ const Update = () => {
                     className="input input-bordered"
                 />
                 </div>
-                {/* Type */}
+                {/* Category */}
                 <div className="form-control">
                 <label className="label">
                     <span className="label-text">Category</span>
                 </label>
-                <input
-                    type="text"
-                    name="category"
+                <select 
+                    name="category" 
                     placeholder="Enter book category"
-                    defaultValue={category}
                     className="input input-bordered"
-                />
+                    defaultValue={category}
+                >
+                    <option value="History">History</option>
+                    <option value="Thriller">Thriller</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Business">Business</option>
+                    <option value="Travel">Travel</option>
+                </select>
                 </div>
 
                 {/* Rating */}
@@ -81,7 +91,7 @@ const Update = () => {
                     <span className="label-text">Rating</span>
                 </label>
                 <input
-                    type="text"
+                    type="number"
                     name="rating"
                     placeholder="Enter book rating"
                     defaultValue={rating}
@@ -103,7 +113,7 @@ const Update = () => {
                 </div>
                 {/* Form Button */}
                 <div className="form-control mt-6">
-                <button className="btn btn-neutral bg-primary border-2 border-primary  text-white hover:bg-white hover:border-primary hover:text-primary text-base">Update Book</button>
+                <button className="btn btn-secondary hover:bg-white hover:text-amber-500 border-2 text-base">Update Book</button>
                 </div>
             </form>
             </div>

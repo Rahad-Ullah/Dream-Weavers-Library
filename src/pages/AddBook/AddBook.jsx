@@ -9,10 +9,12 @@ const AddBook = () => {
         const name = form.name.value;
         const author_name = form.author.value;
         const category = form.category.value;
+        const quantity = parseInt(form.quantity.value);
         const image = form.image.value;
-        const rating = form.rating.value;
+        const rating = parseInt(form.rating.value);
         const description = form.description.value;
-        const newBook = {name, author_name, category, image, rating, description}
+        const newBook = {name, author_name, category, quantity, image, rating, description}
+        console.log(newBook)
 
         // send data to the server
         axios.post(`http://localhost:5000/books`, newBook)
@@ -29,11 +31,11 @@ const AddBook = () => {
     
     return (
         <div>
-        <div className='max-w-4xl mx-auto py-16'>
-            <div className="px-8 md:px-28 py-16 bg-sky-50">
-            <h2 className="text-3xl text-center font-semibold mb-6 font-poppins text-[#374151]">Add Book</h2>
+        <div className='py-16 px-4 md:px-6 lg:px-8'>
+            <div className="max-w-5xl mx-auto px-8 md:px-28 py-16 bg-sky-50 rounded-lg">
+            <h2 className="text-3xl text-center font-semibold mb-6 font-poppins text-primary">Add Book</h2>
             <div>
-            <form onSubmit={handleAddBook} className="grid grid-cols-1 gap-6">
+            <form onSubmit={handleAddBook} className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {/* Name */}
                 <div className="form-control">
                 <label className="label">
@@ -46,7 +48,7 @@ const AddBook = () => {
                     className="input input-bordered"
                 />
                 </div>
-                {/* Brand Name */}
+                {/* Author Name */}
                 <div className="form-control">
                 <label className="label">
                     <span className="label-text">Author</span>
@@ -58,17 +60,37 @@ const AddBook = () => {
                     className="input input-bordered"
                 />
                 </div>
-                {/* Type */}
+                
+                {/* Quantity */}
+                <div className="form-control">
+                <label className="label">
+                    <span className="label-text">Quantity</span>
+                </label>
+                <input
+                    type="number"
+                    name="quantity"
+                    placeholder="Enter book quantity"
+                    className="input input-bordered"
+                />
+                </div>
+
+                {/* Category */}
                 <div className="form-control">
                 <label className="label">
                     <span className="label-text">Category</span>
                 </label>
-                <input
-                    type="text"
-                    name="category"
+                <select 
+                    name="category" 
                     placeholder="Enter book category"
                     className="input input-bordered"
-                />
+                >
+                    <option value="History">History</option>
+                    <option value="Thriller">Thriller</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Business">Business</option>
+                    <option value="Travel">Travel</option>
+                </select>
                 </div>
 
                 {/* Rating */}
@@ -77,7 +99,7 @@ const AddBook = () => {
                     <span className="label-text">Rating</span>
                 </label>
                 <input
-                    type="text"
+                    type="number"
                     name="rating"
                     placeholder="Enter book rating"
                     className="input input-bordered"
@@ -96,7 +118,7 @@ const AddBook = () => {
                 />
                 </div>
                 {/* Description */}
-                <div className="form-control">
+                <div className="form-control lg:col-span-2">
                 <label className="label">
                     <span className="label-text">Description</span>
                 </label>
@@ -108,7 +130,7 @@ const AddBook = () => {
                 />
                 </div>
                 {/* Form Button */}
-                <div className="form-control mt-6">
+                <div className="form-control mt-6 lg:col-span-2">
                 <button className="btn btn-neutral bg-primary border-2 border-primary  text-white hover:bg-white hover:border-primary hover:text-primary text-base">Add Book</button>
                 </div>
             </form>

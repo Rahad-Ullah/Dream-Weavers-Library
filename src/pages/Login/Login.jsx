@@ -31,8 +31,8 @@ const Login = () => {
       .catch((err) => {
         console.log(err)
         Swal.fire({
-          title: 'Error!',
-          text: 'Login failed',
+          title: 'Login Failed!',
+          text: 'Invalid Email or Password',
           icon: 'error',
           confirmButtonText: 'Try again'
         })

@@ -4,21 +4,37 @@ import singUpImg from '../../assets/sign-up.webp'
 import useAuth from "../../hooks/useAuth";
 import Swal from 'sweetalert2'
 import axios from "axios";
+import { useState } from "react";
 
 const SignUp = () => {
     const {createUser} = useAuth()
+    const [error, setError] = useState('')
 
-    const handleSignUp = (event) => {
-        event.preventDefault()
-        const form = event.target;
-        const name = form.name.value;
-        const email = form.email.value;
-        const password = form.password.value;
-        const photoURL = form.photo.value;
+
+    const handleSignUp = (e) => {
+        e.preventDefault()
+        const form = new FormData(e.currentTarget)
+        const name = form.get('name')
+        const email = form.get('email')
+        const password = form.get('password')
+        const photoURL = form.get('photo')
         const newUser = {
             name,
             email,
             photoURL
+        }
+
+        // password length validation
+        if(password.length < 6){
+        setError("Password must be at least 6 character")
+        return;
+        }
+        else if(!/[A-Z][`!@#$%^&*()_\-+={};':"|,.<>?~ ]/.test(password)){
+            setError('Password must have at least one capital letter and special character')
+            return;
+        }
+        else{
+            setError('')
         }
         
         createUser(email, password)
@@ -104,6 +120,7 @@ const SignUp = () => {
                         name="password"
                         required
                     />
+                    <p className="text-sm text-red-500 mt-2">{error}</p>
                   </div>
                   <div className="form-control mt-6">
                     <button className="btn btn-primary normal-case text-base">Sign Up</button>

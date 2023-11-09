@@ -1,11 +1,9 @@
 import axios from 'axios';
-import { useState } from 'react';
 import toast from 'react-hot-toast';
 
 
 const BorrowedItem = ({book, borrowedBooks, setBorrowedBooks}) => {
     const {_id, name, image, category, quantity, borrowedDate, returnDate} = book;
-    const [availQuantity, setAvailQuantity] = useState(quantity)
 
 
     const handleDelete = () => {
@@ -20,17 +18,16 @@ const BorrowedItem = ({book, borrowedBooks, setBorrowedBooks}) => {
             }
         }).catch((err) => {
             console.log(err)
+            toast.error('Failed to return.')
         });
 
         // update available book quantity
-        axios.patch(`http://localhost:5000/book?name=${name}`, {quantity: availQuantity + 1})
+        axios.patch(`http://localhost:5000/book?name=${name}`, {quantity: quantity + 1})
         .then((result) => {
             console.log(result.data)
-            if(result.data.modifiedCount){
-                setAvailQuantity(availQuantity + 1)
-            }
         }).catch((err) => {
             console.log(err)
+            toast.error('Failed to update quantity.')
         });
 
     }
@@ -39,14 +36,14 @@ const BorrowedItem = ({book, borrowedBooks, setBorrowedBooks}) => {
     return (
     <tr>
         <td>
-            <div className="flex items-center gap-8">
+            <div className="flex items-center gap-4 md:gap-8">
                 <div className="">
-                    <div className="w-16">
+                    <div className="w-12 md:w-16">
                         <img src={image} alt="book image" className='w-full h-full'/>
                     </div>
                 </div>
                 <div className=''>
-                    <div className="text-lg font-bold">{name}</div>
+                    <div className="text-base lg:text-lg font-semibold">{name}</div>
                     <div className="font-bold opacity-50">{category}</div>
                 </div>
             </div>
@@ -59,7 +56,7 @@ const BorrowedItem = ({book, borrowedBooks, setBorrowedBooks}) => {
         </td>
         <td>
             <div className="flex flex-col items-center gap-3">
-                <span onClick={handleDelete} className="btn btn-error normal-case text-base">Return</span>
+                <span onClick={handleDelete} className="btn btn-sm md:btn-md btn-error normal-case text-base">Return</span>
             </div>
         </td>
     </tr>

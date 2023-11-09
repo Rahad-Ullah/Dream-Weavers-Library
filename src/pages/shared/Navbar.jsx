@@ -15,7 +15,7 @@ const Navbar = () => {
             axios.get(`http://localhost:5000/users?email=${user?.email}`)
             .then(res => setLoggedUser(res.data))
         }
-    },[])
+    },[user])
 
     const handleLogOut = () => {
         logOut()

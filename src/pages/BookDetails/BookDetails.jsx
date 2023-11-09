@@ -12,6 +12,7 @@ const BookDetails = () => {
     const {user} = useAuth()
     const [availQuantity, setAvailQuantity] = useState(quantity)
     const [loggedUser, setLoggedUser] = useState({})
+    const [isBorrowed, setIsBorrowed] = useState(false)
 
     useEffect( () => {
         if(user){
@@ -21,6 +22,11 @@ const BookDetails = () => {
             })
         }
     },[user])
+
+    useEffect( () => {
+        axios.get(`http://localhost:5000/borrowed-status?name=${name}&email=${user.email}`)
+        .then(res => setIsBorrowed(res.data))
+    },[name, user, availQuantity])
 
     const handleBorrow = (e) => {
         e.preventDefault()
@@ -36,13 +42,17 @@ const BookDetails = () => {
             name,
             image,
             category,
-            quantity,
+            quantity: quantity - 1,
             borrowedDate,
             returnDate
         }
         
         if(availQuantity < 1){
-            toast.error('No book available now.')
+            toast.error('No copy available now.')
+            return;
+        }
+        if(isBorrowed.status){
+            toast.error('Already is in list')
             return;
         }
         // decrease available book quantity

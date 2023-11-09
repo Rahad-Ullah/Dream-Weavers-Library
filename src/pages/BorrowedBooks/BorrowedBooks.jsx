@@ -12,7 +12,7 @@ const BorrowedBooks = () => {
     useEffect(() => {
         axios.get(`http://localhost:5000/borrowed-books?email=${email}`)
         .then(res => setBorrowedBooks(res.data))
-    },[])
+    },[email])
 
     return (
         <div className="font-poppins">
@@ -30,14 +30,14 @@ const BorrowedBooks = () => {
                         <h1 className="text-2xl font-bold">Borrowed Books</h1>
                         <h3 className="text-lg font-semibold">{borrowedBooks.length} Items</h3>
                     </header>
-                    <div className="overflow-x-auto">
-                        <table className="table">
+                    <div className="overflow-x-auto w-full">
+                        <table className="table p-0">
                             {/* head */}
                             <thead>
                                 <tr>
                                     <th>Name</th>
-                                    <th>Borrow Date</th>
-                                    <th>Return Date</th>
+                                    <th className="">Borrow Date</th>
+                                    <th className="">Return Date</th>
                                     <th></th>
                                 </tr>
                             </thead>

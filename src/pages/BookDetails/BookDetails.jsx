@@ -3,7 +3,7 @@ import { Rating } from 'primereact/rating';
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
 import toast, { Toaster } from 'react-hot-toast';
-import { useState } from "react";
+import { useEffect, useState } from "react";
         
 
 const BookDetails = () => {
@@ -13,10 +13,14 @@ const BookDetails = () => {
     const [availQuantity, setAvailQuantity] = useState(quantity)
     const [loggedUser, setLoggedUser] = useState({})
 
-    if(user){
-        axios.get(`http://localhost:5000/users?email=${user?.email}`)
-        .then(res => setLoggedUser(res.data))
-    }
+    useEffect( () => {
+        if(user){
+            axios.get(`http://localhost:5000/users?email=${user?.email}`)
+            .then(res => {
+                setLoggedUser(res.data)
+            })
+        }
+    },[user])
 
     const handleBorrow = (e) => {
         e.preventDefault()
@@ -41,6 +45,17 @@ const BookDetails = () => {
             toast.error('No book available now.')
             return;
         }
+        // decrease available book quantity
+        axios.patch(`http://localhost:5000/books?id=${_id}&name=${name}&email=${email}`, {quantity: availQuantity - 1})
+        .then((result) => {
+            console.log(result.data)
+            if(result.data.modifiedCount){
+                setAvailQuantity(availQuantity - 1)
+            }
+        }).catch((err) => {
+            console.log(err)
+        });
+        
         // insert to borrowed collection
         axios.post(`http://localhost:5000/borrowed-books`, borrowOrder)
         .then((result) => {
@@ -50,18 +65,7 @@ const BookDetails = () => {
             }
         }).catch((err) => {
             console.log(err)
-            toast.error('Already has added to borrowed list.')
-        });
-
-        // update available book quantity
-        axios.patch(`http://localhost:5000/books?id=${_id}&name=${name}`, {quantity: availQuantity - 1})
-        .then((result) => {
-            console.log(result.data)
-            if(result.data.modifiedCount){
-                setAvailQuantity(availQuantity - 1)
-            }
-        }).catch((err) => {
-            console.log(err)
+            toast.error('Already is added to borrowed list.')
         });
     }
     
@@ -104,7 +108,7 @@ const BookDetails = () => {
                             placeholder="Your name"
                             className="input input-bordered"
                             name="name"
-                            defaultValue={loggedUser?.name}
+                            defaultValue={user?.displayName || loggedUser?.name}
                             required
                         />
                         </div>

@@ -1,5 +1,3 @@
-## Assignment_ID: assignment_category_0008
-
 # Dream Weavers Library
 ### An smart library management system.
 

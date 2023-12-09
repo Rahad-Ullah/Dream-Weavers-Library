@@ -8,7 +8,7 @@ const BorrowedItem = ({book, borrowedBooks, setBorrowedBooks}) => {
 
     const handleDelete = () => {
         // delete borrowed books
-        axios.delete(`http://localhost:5000/borrowed-books?id=${_id}`)
+        axios.delete(`https://dream-weavers-library-server.vercel.app/borrowed-books?id=${_id}`)
         .then((result) => {
             console.log(result.data)
             if(result.data.deletedCount){
@@ -22,7 +22,7 @@ const BorrowedItem = ({book, borrowedBooks, setBorrowedBooks}) => {
         });
 
         // update available book quantity
-        axios.patch(`http://localhost:5000/book?name=${name}`, {quantity: quantity + 1})
+        axios.patch(`https://dream-weavers-library-server.vercel.app/book?name=${name}`, {quantity: quantity + 1})
         .then((result) => {
             console.log(result.data)
         }).catch((err) => {

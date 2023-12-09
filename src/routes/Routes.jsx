@@ -26,12 +26,12 @@ const router = createBrowserRouter([
             {
                 path: 'books/:category',
                 element: <CategoryDetails></CategoryDetails>,
-                loader: ({params}) => fetch(`http://localhost:5000/books/${params.category}`)
+                loader: ({params}) => fetch(`https://dream-weavers-library-server.vercel.app/books/${params.category}`)
             },
             {
                 path: 'book/:id',
                 element: <PrivateRoutes><BookDetails></BookDetails></PrivateRoutes>,
-                loader: ({params}) => fetch(`http://localhost:5000/book/${params.id}`)
+                loader: ({params}) => fetch(`https://dream-weavers-library-server.vercel.app/book/${params.id}`)
             },
             {
                 path: '/pdf-view/:id',
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
             {
                 path: '/all-books',
                 element: <PrivateRoutes><AllBooks></AllBooks></PrivateRoutes>,
-                loader: () => fetch(`http://localhost:5000/avail-books`)
+                loader: () => fetch(`https://dream-weavers-library-server.vercel.app/avail-books`)
             },
             {
                 path: '/add-book',
@@ -53,7 +53,7 @@ const router = createBrowserRouter([
             {
                 path: 'update/:id',
                 element: <PrivateRoutes><Update></Update></PrivateRoutes>,
-                loader: ({params}) => fetch(`http://localhost:5000/book/${params.id}`)
+                loader: ({params}) => fetch(`https://dream-weavers-library-server.vercel.app/book/${params.id}`)
             },
             {
                 path: '/sign-up',

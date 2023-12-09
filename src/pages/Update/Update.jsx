@@ -17,7 +17,7 @@ const Update = () => {
         const updatedBook = {name, author_name, category, image, rating}
 
         // send data to the server
-        axios.patch(`http://localhost:5000/avail-books?id=${_id}`, updatedBook)
+        axios.patch(`https://dream-weavers-library-server.vercel.app/avail-books?id=${_id}`, updatedBook)
         .then((result) => {
             console.log(result.data)
             if(result.data.modifiedCount){

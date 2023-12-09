@@ -9,7 +9,7 @@ const PdfBookViewer = () => {
     const [book, setBook] = useState({})
 
     useEffect(() => {
-        fetch(`http://localhost:5000/book/${id}`)
+        fetch(`https://dream-weavers-library-server.vercel.app/book/${id}`)
         .then(res => res.json())
         .then(data => setBook(data))
     } ,[id])

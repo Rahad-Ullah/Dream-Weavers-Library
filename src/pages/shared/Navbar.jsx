@@ -12,7 +12,7 @@ const Navbar = () => {
 
     useEffect( () => {
         if(user){
-            axios.get(`http://localhost:5000/users?email=${user?.email}`)
+            axios.get(`https://dream-weavers-library-server.vercel.app/users?email=${user?.email}`)
             .then(res => setLoggedUser(res.data))
         }
     },[user])

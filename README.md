@@ -15,6 +15,15 @@ Our library provides a tranquil space for individuals to immerse themselves in t
 - **Rate books**: Log in to your account and choose from one to five stars to rate any book you have read from our library. Write a short review and share your opinion and feedback with other readers.
 - **Reserve books**: Select the books you want to borrow and reserve them online. We will hold them for you for a limited period of time and notify you when they are ready for collection.
 
+## Used technologies
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![DaisyUI](https://img.shields.io/badge/daisyui-5A0EF8?style=for-the-badge&logo=daisyui&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
+
 
 Join us at Dream Weavers Library, where every page has the potential to weave dreams and ignite the flames of imagination.
 

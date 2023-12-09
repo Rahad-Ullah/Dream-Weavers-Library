@@ -17,7 +17,7 @@ const AddBook = () => {
         console.log(newBook)
 
         // send data to the server
-        axios.post(`http://localhost:5000/books`, newBook)
+        axios.post(`https://dream-weavers-library-server.vercel.app/books`, newBook)
         .then((result) => {
             console.log(result.data)
             if(result.data.insertedId){

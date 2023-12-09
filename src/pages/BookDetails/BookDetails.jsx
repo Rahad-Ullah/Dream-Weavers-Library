@@ -16,7 +16,7 @@ const BookDetails = () => {
 
     useEffect( () => {
         if(user){
-            axios.get(`http://localhost:5000/users?email=${user?.email}`)
+            axios.get(`https://dream-weavers-library-server.vercel.app/users?email=${user?.email}`)
             .then(res => {
                 setLoggedUser(res.data)
             })
@@ -24,7 +24,7 @@ const BookDetails = () => {
     },[user])
 
     useEffect( () => {
-        axios.get(`http://localhost:5000/borrowed-status?name=${name}&email=${user.email}`)
+        axios.get(`https://dream-weavers-library-server.vercel.app/borrowed-status?name=${name}&email=${user.email}`)
         .then(res => setIsBorrowed(res.data))
     },[name, user, availQuantity])
 
@@ -56,7 +56,7 @@ const BookDetails = () => {
             return;
         }
         // decrease available book quantity
-        axios.patch(`http://localhost:5000/books?id=${_id}&name=${name}&email=${email}`, {quantity: availQuantity - 1})
+        axios.patch(`https://dream-weavers-library-server.vercel.app/books?id=${_id}&name=${name}&email=${email}`, {quantity: availQuantity - 1})
         .then((result) => {
             console.log(result.data)
             if(result.data.modifiedCount){
@@ -67,7 +67,7 @@ const BookDetails = () => {
         });
         
         // insert to borrowed collection
-        axios.post(`http://localhost:5000/borrowed-books`, borrowOrder)
+        axios.post(`https://dream-weavers-library-server.vercel.app/borrowed-books`, borrowOrder)
         .then((result) => {
             console.log(result.data)
             if(result.data.insertedId){

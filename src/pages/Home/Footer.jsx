@@ -19,14 +19,14 @@ const Footer = () => {
             </aside> 
             <nav className='w-full grid justify-center'>
                 <header className="footer-title">Categories</header> 
-                <Link to={'http://localhost:5000/books/History'} className="link link-hover hover:text-secondary">History</Link> 
-                <Link to={'http://localhost:5000/books/Thriller'} className="link link-hover hover:text-secondary">Thriller</Link> 
-                <Link to={'http://localhost:5000/books/Sci-Fi'} className="link link-hover hover:text-secondary">Sci-Fi</Link> 
-                <Link to={'http://localhost:5000/books/Technology'} className="link link-hover hover:text-secondary">Technology</Link>
+                <Link to={'https://dream-weavers-library-server.vercel.app/books/History'} className="link link-hover hover:text-secondary">History</Link> 
+                <Link to={'https://dream-weavers-library-server.vercel.app/books/Thriller'} className="link link-hover hover:text-secondary">Thriller</Link> 
+                <Link to={'https://dream-weavers-library-server.vercel.app/books/Sci-Fi'} className="link link-hover hover:text-secondary">Sci-Fi</Link> 
+                <Link to={'https://dream-weavers-library-server.vercel.app/books/Technology'} className="link link-hover hover:text-secondary">Technology</Link>
             </nav> 
             <nav className='w-full grid justify-center'>
                 <header className="footer-title">Company</header> 
-                <Link to={'http://localhost:5000/all-books'} className="link link-hover hover:text-secondary">All Books</Link> 
+                <Link to={'https://dream-weavers-library-server.vercel.app/all-books'} className="link link-hover hover:text-secondary">All Books</Link> 
                 <Link to={''} className="link link-hover hover:text-secondary">About us</Link> 
                 <Link to={''} className="link link-hover hover:text-secondary">Contact</Link> 
                 <Link to={''} className="link link-hover hover:text-secondary">Meet Us</Link>

@@ -7,8 +7,8 @@ Our library provides a tranquil space for individuals to immerse themselves in t
 
 ## Features
 
-- **Smart library management system**: Borrow books online and return them easily with our user-friendly system. No need to visit the library in person, just log in to your account and select the books you want to read.
-- **Wide variety of books**: Explore our diverse collection of books on different categories, such as history, thriller, science-fiction, travel, business, science, technology and more. Find your favorite authors and genres, or discover new ones that you may not have encountered before.
+- **Effortless Online Borrowing**: Streamline book borrowing and returns with our intuitive online system. Enjoy the convenience of borrowing without the need for in-person visits.
+- **Diverse Book Collection**: Immerse yourself in various categories: history, thriller, science-fiction, travel, business, science, technology, and beyond. Find beloved authors and genres or uncover new, captivating reads.
 - **Website**: Browse our library's collection online, read a part of the book you want to borrow, and see the available quantity of any book. Get a preview of the book's content and style, and check if the book is in stock or not.
 - **Rate books**: Log in to your account and choose from one to five stars to rate any book you have read from our library. Write a short review and share your opinion and feedback with other readers.
 - **Reserve books**: Select the books you want to borrow and reserve them online. We will hold them for you for a limited period of time and notify you when they are ready for collection.
